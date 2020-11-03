@@ -1,0 +1,16 @@
+.localization {
+  display: flex;
+  cursor: pointer;
+}
+
+.localization .language {
+  color: var(--accent-2);
+}
+
+.localization .language:not(:first-child) {
+  margin-left: 10px;
+}
+
+.localization .language:hover {
+  text-decoration: underline;
+}
