@@ -18,7 +18,7 @@ body.light {
   --primary-color: white;
 }
 
-body.dark {
+body {
   --color: white;
   --accent-1: #21242d;
   --accent-2: #a1a1a1;

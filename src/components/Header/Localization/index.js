@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import localization from "../../../localization";
 import { AppContext } from "../../../context";
 import "./styles.css";

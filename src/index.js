@@ -1,13 +1,13 @@
-import React from "react";
+import { StrictMode } from "react";
 import ReactDOM from "react-dom";
+import WebFontLoader from "webfontloader";
+
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import WebFontLoader from "webfontloader";
 
 import "./localization";
 import "./css/index.css";
 
-// Prefetch fonts
 WebFontLoader.load({
   google: {
     families: ["Open Sans:300,400,700"],
@@ -15,9 +15,9 @@ WebFontLoader.load({
 });
 
 ReactDOM.render(
-  <React.StrictMode>
+  <StrictMode>
     <App />
-  </React.StrictMode>,
+  </StrictMode>,
   document.getElementById("root")
 );
 

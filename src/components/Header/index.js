@@ -1,4 +1,3 @@
-import React from "react";
 import Theme from "./Theme";
 import Localization from "./Localization";
 import localization from "../../localization";
