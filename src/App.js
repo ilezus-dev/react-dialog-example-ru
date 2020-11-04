@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 
-import Container from "./components/Container";
 import Dialog from "./components/Dialog";
 import Sender from "./components/Sender";
 import Header from "./components/Header";
@@ -48,11 +47,11 @@ const App = () => {
         toggleLanguage,
       }}
     >
-      <Container>
+      <div className="container">
         <Header />
         <Dialog newMessage={message} messages={data} />
         <Sender onAddMessage={onAddMessage} />
-      </Container>
+      </div>
     </AppContext.Provider>
   );
 };
