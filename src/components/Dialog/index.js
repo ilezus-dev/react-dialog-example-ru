@@ -6,13 +6,14 @@ import Title from "./Title";
 
 import { normalizeDialog } from "./helpers";
 import reducer from "./reducer";
+import data from "../../data";
 
 import "./styles.css";
 
-const Dialog = ({ newMessage, messages }) => {
+const Dialog = ({ newMessage }) => {
   const dialogRef = useRef();
   const [state, dispatch] = useReducer(reducer, {
-    messages,
+    messages: data,
   });
 
   useEffect(() => {
@@ -63,7 +64,6 @@ const Dialog = ({ newMessage, messages }) => {
 };
 
 Dialog.propTypes = {
-  messages: PropTypes.array.isRequired,
   newMessage: PropTypes.shape({
     id: PropTypes.number,
   }),

@@ -10,7 +10,15 @@ const Sender = ({ onAddMessage }) => {
   const onSubmit = (event) => {
     event.preventDefault();
 
-    onAddMessage(value);
+    onAddMessage({
+      id: Date.now(),
+      avatar:
+        "https://sun9-58.userapi.com/c836638/v836638514/867c/SPMigNB8gw0.jpg",
+      message: value,
+      date: new Date().toISOString(),
+      is: "my",
+      status: "sended",
+    });
     setValue("");
   };
 
