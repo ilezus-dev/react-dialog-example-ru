@@ -15,6 +15,7 @@ export const normalizeDialog = (dialog) => {
       if (i === 0 || diff) {
         newDialog.push({
           type: "title",
+          id: `item-title-${item.id}`,
           title: dayjs(item.date).calendar(null, {
             sameDay: `[${localization.today}]`,
             lastWeek: "DD MMMM",
@@ -27,6 +28,7 @@ export const normalizeDialog = (dialog) => {
     if (i === 0 || item.is !== dialog[i - 1].is) {
       newDialog.push({
         type: "message",
+        id: `item-message-${item.id}`,
         avatar: item.avatar,
         isReverse: item.is === "my",
         isRemovable: item.is === "my",

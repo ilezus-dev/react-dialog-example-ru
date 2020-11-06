@@ -7,7 +7,7 @@ import Icon from "../../Icon";
 import "./styles.css";
 
 const Item = ({ isReverse, isRemovable, messages, avatar, onRemove }) => {
-  const onRemoveProxy = (event) => {
+  const onRemoveHandle = (event) => {
     const { id } = event.currentTarget.dataset;
     onRemove(+id);
   };
@@ -36,7 +36,7 @@ const Item = ({ isReverse, isRemovable, messages, avatar, onRemove }) => {
               data-id={item.id}
               size={18}
               className="remove-message"
-              onClick={onRemoveProxy}
+              onClick={onRemoveHandle}
             />
           </div>
         ))}
