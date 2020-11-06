@@ -6,7 +6,6 @@ import "./styles.css";
 const Header = () => {
   return (
     <div className="header">
-      <Localization />
       <div className="user">
         <div className="name">Ilezus Dev</div>
         <div className="status">
