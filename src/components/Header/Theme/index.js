@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import React, { useContext } from "react";
 import { AppContext } from "../../../context";
 import { IoIosMoon, IoIosSunny } from "react-icons/io";
 import "./styles.css";

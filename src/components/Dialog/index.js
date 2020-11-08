@@ -1,4 +1,4 @@
-import { useReducer, useEffect, useRef } from "react";
+import React, { useReducer, useEffect, useRef } from "react";
 import PropTypes from "prop-types";
 
 import Item from "./Item";
