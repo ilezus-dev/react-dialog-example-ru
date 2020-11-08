@@ -1,0 +1,27 @@
+.header .user-info {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.header .user-info .status {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--accent-2);
+  position: relative;
+  text-align: center;
+  font-size: 13px;
+}
+
+.header .user-info .name {
+  text-align: center;
+}
+
+.header .user-info .status .circle {
+  border-radius: 50%;
+  width: 7px;
+  height: 7px;
+  background: var(--primary);
+  margin-right: 5px;
+}
