@@ -1,19 +1,16 @@
 import Theme from "./Theme";
-import Localization from "./Localization";
-import localization from "../../localization";
 import "./styles.css";
 
 const Header = () => {
   return (
     <div className="header">
+      <Theme />
       <div className="user">
         <div className="name">Ilezus Dev</div>
         <div className="status">
-          <span className="circle" />
-          {localization.online}
+          <span className="circle" />В сети
         </div>
       </div>
-      <Theme />
     </div>
   );
 };

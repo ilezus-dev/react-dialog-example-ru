@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import Dialog from "./components/Dialog";
 import Sender from "./components/Sender";
@@ -9,12 +9,11 @@ import { getTheme, setTheme } from "./helpers/theme";
 
 const App = () => {
   const [message, addMessage] = useState(null);
-  const [theme, updateTheme] = useState(getTheme());
+  const [theme, toggleTheme] = useState(getTheme());
 
-  const toggleTheme = (theme) => {
+  useEffect(() => {
     setTheme(theme);
-    updateTheme(theme);
-  };
+  }, [theme]);
 
   return (
     <AppContext.Provider

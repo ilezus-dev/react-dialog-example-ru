@@ -1,8 +1,4 @@
 import dayjs from "dayjs";
-import localization from "../../localization";
-import Calendar from "dayjs/plugin/calendar";
-
-dayjs.extend(Calendar);
 
 export const normalizeDialog = (dialog) => {
   const newDialog = [];
@@ -16,11 +12,7 @@ export const normalizeDialog = (dialog) => {
         newDialog.push({
           type: "title",
           id: `item-title-${item.id}`,
-          title: dayjs(item.date).calendar(null, {
-            sameDay: `[${localization.today}]`,
-            lastWeek: "DD MMMM",
-            sameElse: "DD MMMM YYYY",
-          }),
+          date: item.date,
         });
       }
     }

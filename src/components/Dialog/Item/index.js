@@ -48,7 +48,6 @@ const Item = ({ isReverse, isRemovable, messages, avatar, onRemove }) => {
 Item.propTypes = {
   isReverse: PropTypes.bool.isRequired,
   isRemovable: PropTypes.bool.isRequired,
-  onRemove: PropTypes.func.isRequired,
   avatar: PropTypes.string.isRequired,
   messages: PropTypes.arrayOf(
     PropTypes.shape({
@@ -58,6 +57,7 @@ Item.propTypes = {
       status: PropTypes.oneOf(["sended", "readed"]),
     })
   ).isRequired,
+  onRemove: PropTypes.func.isRequired,
 };
 
 export default Item;

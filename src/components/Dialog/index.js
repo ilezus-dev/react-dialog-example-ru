@@ -55,7 +55,7 @@ const Dialog = ({ newMessage }) => {
           item.type === "message" ? (
             <Item {...item} key={item.id} onRemove={onRemove} />
           ) : (
-            <Title key={item.id} title={item.title} />
+            <Title key={item.id} date={item.date} />
           )
         )}
       </div>

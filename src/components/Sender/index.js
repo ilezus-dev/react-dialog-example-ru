@@ -1,6 +1,5 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
-import localization from "../../localization";
 import "./styles.css";
 
 const Sender = ({ onAddMessage }) => {
@@ -25,12 +24,12 @@ const Sender = ({ onAddMessage }) => {
   return (
     <form className="sender" onSubmit={onSubmit}>
       <input
-        placeholder={localization.enterMessage}
+        placeholder="Введите сообщение"
         value={value}
         onChange={onChange}
         required
       />
-      <button>{localization.send}</button>
+      <button>Отправить</button>
     </form>
   );
 };
