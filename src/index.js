@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import ReactDOM from "react-dom/client";
 import WebFontLoader from "webfontloader";
 import dayjs from "dayjs";
 
@@ -16,9 +16,9 @@ WebFontLoader.load({
 
 dayjs.locale("ru");
 
-ReactDOM.render(
+const root = ReactDOM.createRoot(document.getElementById("root"))
+root.render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>,
-  document.getElementById("root")
+  </React.StrictMode>
 );
